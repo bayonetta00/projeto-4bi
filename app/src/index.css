@@ -1,0 +1,183 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230704/pngtree-3d-rendered-lottery-ball-backdrop-image_3726549.jpg');
+  background-size: cover; 
+  background-position: top center; 
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  transition: all 0.3s ease; 
+}
+
+.container:hover {
+  transform: scale(1.05); 
+}
+
+h1 {
+  color: #5e4caf;
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+
+.inputs {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  width: 70px;
+  padding: 12px;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid #e67e39;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+input[type="number"]:focus {
+  border-color: #5e4caf;
+  box-shadow: 0 0 10px #4a3a8d(0, 123, 255, 0.5);
+}
+
+input[type="number"]:invalid {
+  border-color: #3b166b;
+}
+
+button {
+  background-color: #e67e39;
+  color: #fff;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #5e4caf;
+  transform: scale(1.1);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.7);
+}
+
+#resultado {
+  margin-top: 30px;
+}
+
+#numerosSorteados {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e67e39;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#acertos {
+  font-size: 20px;
+  color: #5e4caf00;
+  margin-top: 10px;
+}
+
+
+@keyframes rollIn {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#resultado p {
+  animation: rollIn 1s ease-out;
+}
+
+
+.numero-sorteado {
+  display: inline-block;
+  margin: 10px;
+  width: 70px;
+  height: 70px;
+  background-color: #5e4caf;
+  color: #fff;
+  font-size: 28px;
+  line-height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.numero-sorteado:hover {
+  transform: scale(1.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 20px 30px;
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+  
+  input[type="number"] {
+    width: 50px;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 12px 18px;
+    font-size: 18px;
+  }
+
+  .numero-sorteado {
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+}

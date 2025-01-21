@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Loteria</title>
+    <link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de Loteria</h1>
+        <div>
+            <p>Escolha 6 números entre 1 e 60:</p>
+            <input type="number" id="numero1" min="1" max="60" />
+            <input type="number" id="numero2" min="1" max="60" />
+            <input type="number" id="numero3" min="1" max="60" />
+            <input type="number" id="numero4" min="1" max="60" />
+            <input type="number" id="numero5" min="1" max="60" />
+            <input type="number" id="numero6" min="1" max="60" />
+        </div>
+        <button id="btnSortear">Sortear Números</button>
+        <div id="resultado">
+            <h2>Resultado</h2>
+            <p id="numerosSorteados"></p>
+            <p id="acertos"></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
